@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rock-Paper-Scissor-Chat!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="holder" id="content">
+        <div class="item" id="game">
+            <div class="form-group">
+                <label>Username: </label>
+                <input id="username" type="text" />
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" value="r" autocomplete="off"> Rock
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" value="p" autocomplete="off"> Paper
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" value="s" autocomplete="off"> Scissor
+                    </label>
+                </div>
+                <button id="submitButton" type="submit">Submit</button>            
+            </div>
+            <!-- <div id="msg"></div>
+            <div id="last-game"></div> -->
+            <div id="wins">You have won <span id="win-count"> 0 </span>times! </div>
+        </div>
+
+        <div class="item" id="chat">
+            <div class="form-group">
+                <textarea class="form-control" id="msgList" readonly rows="18"></textarea><br>
+                <label>Message: </label>
+                <input id="message" type="text" />
+                <button id="submitButton" type="submit">Submit</button>
+            </div> 
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="assets/javascript/app-game.js"></script>
+    <script src="assets/javascript/app-chat.js"></script>
+
+</body>
+</html>
